@@ -1,42 +1,25 @@
-# <img src="public/checkbox.png" height="25"/> **Task list**
-![Task list](https://raw.githubusercontent.com/kozlowskiigor/task-list-react/main/images/CreamyVastLeech-max-1mb.gif)
+# **Currency Converter**
 
-##  <img src="public/checkbox.png" height="20"/> **Task List Demo**
-[Task List Demo](https://kozlowskiigor.github.io/task-list-react/) 
+![My simple Currency converter](https://raw.githubusercontent.com/kozlowskiigor/Currency-Converter/main/images/CurrencyConverterAnimation.gif)
+## **Description**
 
-## <img src="public/checkbox.png" height="20"/> **Preview**
-![My website](https://raw.githubusercontent.com/kozlowskiigor/simple-to-do-list/main/To-doAnimation2.gif)
+In **[Simple currency converter](https://kozlowskiigor.github.io/Currency-Converter/currencyConverter.html)** you can convert different currencies. 
+There are currently 5 currencies available:
+- PLN
+- EUR
+- GBP 
+- CZK
+- USD. 
 
-## <img src="public/checkbox.png" height="20"/> **Description**
+It was a task in programming course in the beggining of my journey and I hope to develop enough to be able to take part in great projects.
 
-### **Add new task field**
-You can fill in the input field to add task to the task list.
-
-### **Add new task button**
-When then input field is filled clicking teal button which is located on the right will add this task to the list below.
-
-### Task list
-**Adding a task by pressing the button will cause it to appear on the list below between two buttons.**
-
-Green button on the left is a marker that shows if the task is completed or not. After adding a task it is empty, when we click on it, we will mark the task as completed and the task will be crossed out and the cross mark will apear inside the button. We can click it again both strikethrough and the check mark will disappear changing our task "to complete".
-
-Red button on the right with trash can icon is used to delete completed tasks from our list.
-
-**Two more buttons appear to the right of "Lista zadań" when at least one task is added to the list.**
-
-First "Ukryj ukończone" is used to hide tasks that are marked as completed. After hiding the tasks the inscription "Ukryj ukończone" will change to "Pokaż ukończone" which will show completed tasks back on the list.
-
-Second "Ukończ wszystkie" is used to mark all tasks from the list as completed.
-
-
-## <img src="public/checkbox.png" height="20"/> **Technologies used in project:**
+## **Technologies used in project:**
 - HTML
 - CSS
 - JAVASCRIPT
-- BEM CONVENTION
+- BEM
+- MARKDOWN
 - ES6+ FEATURES
-- GIT
-- REACT
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
