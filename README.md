@@ -3,7 +3,7 @@
 ![My simple Currency converter](https://raw.githubusercontent.com/kozlowskiigor/Currency-Converter/main/images/CurrencyConverterAnimation.gif)
 ## **Description**
 
-In **[Simple currency converter](https://kozlowskiigor.github.io/Currency-Converter-React/)** you can convert different currencies. 
+In **[Simple currency converter](https://kozlowskiigor.github.io/Currency-Converter-React/index.hml)** you can convert different currencies. 
 There are currently 5 currencies available:
 - PLN
 - EUR
