@@ -1,8 +1,6 @@
 import "./style.css";
 
 const Section = ({ title }) => (
-  <>
-    <p className="sectionHeader">Pola wymagane do wypełnienia oznaczone są *</p>
     <section className="averageExchangeRates">
       <div className="averageExchangeRates--InsideMargin">
         <header className="averageExchangeRates__item">
@@ -22,7 +20,6 @@ const Section = ({ title }) => (
         </p>
       </div>
     </section>
-  </>
 );
 
 export default Section;
