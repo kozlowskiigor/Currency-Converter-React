@@ -13,7 +13,9 @@ const Form = ({ calculateResult }) => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+
     setNewValue("");
+    
     setResult(calculateResult(inputCurrency, outputCurrency, newValue));
   }
 
