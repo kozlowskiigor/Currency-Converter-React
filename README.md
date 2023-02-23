@@ -1,9 +1,14 @@
-# **Currency Converter**
+# **Currency converter**
+![Money gif](https://raw.githubusercontent.com/kozlowskiigor/Currency-Converter-React/main/public/money.gif)
 
+## **Currency converter demo**
+[Currency converter demo](https://kozlowskiigor.github.io/Currency-Converter-React/)
+
+## **Preview**
 ![My simple Currency converter](https://raw.githubusercontent.com/kozlowskiigor/Currency-Converter/main/images/CurrencyConverterAnimation.gif)
-## **Description**
 
-In **[Simple currency converter](https://kozlowskiigor.github.io/Currency-Converter-React/)** you can convert different currencies. 
+## **Description**
+In my currency converter you can convert different currencies. 
 There are currently 5 currencies available:
 - PLN
 - EUR
