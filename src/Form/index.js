@@ -2,20 +2,19 @@ import React, { useState } from "react";
 import "./style.css";
 
 const Form = ({ calculateResult }) => {
+  const [result, setResult] = useState(0);
   const [newValue, setNewValue] = useState("");
   const [inputCurrency, setInputCurrency] = useState("PLN");
-  const [outputCurrency, setOutputCurrency] = useState("PLN")
+  const [outputCurrency, setOutputCurrency] = useState("PLN");
 
   const onInputChange = ({ target }) => setNewValue(target.value)
   const onInputSeclectChange = ({ target }) => setInputCurrency(target.value)
   const onOutputSeclectChange = ({ target }) => setOutputCurrency(target.value)
 
-  const result = calculateResult(inputCurrency, outputCurrency, newValue);
-
   const onFormSubmit = (event) => {
     event.preventDefault();
-    calculateResult();
     setNewValue("");
+    setResult(calculateResult(inputCurrency, outputCurrency, newValue));
   }
 
   return (
