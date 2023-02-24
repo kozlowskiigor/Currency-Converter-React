@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from "./Form";
 import Section from "./Section";
+import currencies from "./Currencies";
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
   };
 
   const calculateResult = (inputCurrency, outputCurrency, newValue) => {
+    // const inputCurrencyRate = currencies.find(
+    //   ({ short }) => short === inputCurrency).value;
+
     switch (inputCurrency) {
       case pln.short:
       default:
@@ -91,8 +95,8 @@ function App() {
       <h1 className="header">
         Kalkulator walut
       </h1>
-      <Form 
-      calculateResult={calculateResult}
+      <Form
+        calculateResult={calculateResult}
       />
       <h2 className="header secondHeader">
         Pola wymagane do wypełnienia oznaczone są *
