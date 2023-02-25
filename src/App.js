@@ -32,8 +32,10 @@ function App() {
   };
 
   const calculateResult = (inputCurrency, outputCurrency, newValue) => {
-    // const inputCurrencyRate = currencies.find(
-    //   ({ short }) => short === inputCurrency).value;
+
+    const inputCurrencyRate = currencies.find(
+      ({ short }) => short === inputCurrency).value;
+    console.log(inputCurrencyRate)
 
     switch (inputCurrency) {
       case pln.short:
