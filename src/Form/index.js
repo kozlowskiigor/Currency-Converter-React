@@ -15,11 +15,11 @@ const Form = ({ calculateResult }) => {
 
   const selectOptions = currencies.find((element) => {
 
-    return (
+    return 
 
 
 
-    );
+    ;
   });
 
   const onFormSubmit = (event) => {
