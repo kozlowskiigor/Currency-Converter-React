@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import currencies from "../Currencies";
 import "./style.css";
 
 const Form = ({ calculateResult }) => {
@@ -13,22 +12,13 @@ const Form = ({ calculateResult }) => {
   const onInputSeclectChange = ({ target }) => setInputCurrency(target.value)
   const onOutputSeclectChange = ({ target }) => setOutputCurrency(target.value)
 
-  const selectOptions = currencies.find((element) => {
-
-    return 
-
-
-
-    ;
-  });
-
   const onFormSubmit = (event) => {
     event.preventDefault();
 
     setNewValue("");
 
     setResult(calculateResult(inputCurrency, outputCurrency, newValue));
-  }
+  };
 
   return (
     <form
