@@ -2,6 +2,7 @@ import "./style.css";
 import currencies from "../Currencies";
 
 const Section = ({ title }) => {
+
   const averageExchangeRates = currencies.map((element, i) => {
 
     if (element.short === "PLN")

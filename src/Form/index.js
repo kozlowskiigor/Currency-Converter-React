@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 const Form = ({ calculateResult }) => {
+
   const [result, setResult] = useState(0);
   const [newValue, setNewValue] = useState("");
   const [inputCurrency, setInputCurrency] = useState("PLN");
@@ -13,6 +14,7 @@ const Form = ({ calculateResult }) => {
   const onOutputSeclectChange = ({ target }) => setOutputCurrency(target.value)
 
   const onFormSubmit = (event) => {
+
     event.preventDefault();
 
     setNewValue("");
