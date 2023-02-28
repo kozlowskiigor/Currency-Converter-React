@@ -5,7 +5,7 @@ import { currencies } from "./Currencies";
 
 function App() {
 
-  const calculateResult = (inputCurrency, outputCurrency, newValue) => {
+  const calculateResult = ({ inputCurrency, outputCurrency, newValue }) => {
 
     const inputCurrencyRate = currencies.find(
       ({ short }) => short === inputCurrency).value;
