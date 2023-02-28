@@ -4,16 +4,16 @@ import "./style.css";
 
 const Form = ({ calculateResult }) => {
 
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState({ inputCurrency: "PLN", outputCurrency: "PLN", newValue: 0 });
   const [newValue, setNewValue] = useState("");
   const [inputCurrency, setInputCurrency] = useState("PLN");
   const [outputCurrency, setOutputCurrency] = useState("PLN");
 
+  const convertedAmount = calculateResult(result);
+
   const selectOptions = currencies.map(({ short, name }) => (
     <option key={short} value={short}>{short} - {name}</option>
   ));
-
-  console.log(selectOptions);
 
   const onInputChange = ({ target }) => setNewValue(target.value)
   const onInputSeclectChange = ({ target }) => setInputCurrency(target.value)
@@ -25,7 +25,11 @@ const Form = ({ calculateResult }) => {
 
     setNewValue("");
 
-    setResult(calculateResult(inputCurrency, outputCurrency, newValue));
+    setResult({
+      inputCurrency,
+      outputCurrency,
+      newValue,
+    });
   };
 
   return (
@@ -79,7 +83,7 @@ const Form = ({ calculateResult }) => {
           <p className="convertedAmount">
             Przewalutowana kwota
             <strong className="resault__value">
-              {result.toFixed(2)} {outputCurrency}
+              {convertedAmount.toFixed(2)} {result.outputCurrency}
             </strong>
           </p>
         </span>
