@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { currencies } from "../Currencies";
 import "./style.css";
 
 const Form = ({ calculateResult }) => {
@@ -8,6 +9,11 @@ const Form = ({ calculateResult }) => {
   const [inputCurrency, setInputCurrency] = useState("PLN");
   const [outputCurrency, setOutputCurrency] = useState("PLN");
 
+  const selectOptions = currencies.map(({ short, name }) => (
+    <option key={short} value={short}>{short} - {name}</option>
+  ));
+
+  console.log(selectOptions);
 
   const onInputChange = ({ target }) => setNewValue(target.value)
   const onInputSeclectChange = ({ target }) => setInputCurrency(target.value)
@@ -52,11 +58,7 @@ const Form = ({ calculateResult }) => {
               value={inputCurrency}
               onChange={onInputSeclectChange}
             >
-              <option value="PLN">PLN - polski złoty</option>
-              <option value="GBP">GBP - brytyjski funt szterling</option>
-              <option value="USD">USD - dolar amerykański</option>
-              <option value="CZK">CZK - korona czeska</option>
-              <option value="EUR">EUR - euro</option>
+              {selectOptions}
             </select>
           </label>
         </p>
@@ -68,11 +70,7 @@ const Form = ({ calculateResult }) => {
               value={outputCurrency}
               onChange={onOutputSeclectChange}
             >
-              <option value="PLN">PLN - polski złoty</option>
-              <option value="GBP">GBP - brytyjski funt szterling</option>
-              <option value="USD">USD - dolar amerykański</option>
-              <option value="CZK">CZK - korona czeska</option>
-              <option value="EUR">EUR - euro</option>
+              {selectOptions}
             </select>
           </label>
         </p>
