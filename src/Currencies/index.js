@@ -7,7 +7,7 @@ export const currencies = [
   {
     short: "GBP",
     value: 5.43913,
-    name: "Polski złoty",
+    name: "Funt brytyjski",
   },
   {
     short: "USD",
