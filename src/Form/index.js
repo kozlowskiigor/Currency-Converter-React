@@ -12,7 +12,12 @@ const Form = ({ calculateResult }) => {
   const convertedAmount = calculateResult(result);
 
   const selectOptions = currencies.map(({ short, name }) => (
-    <option key={short} value={short}>{short} - {name}</option>
+    <option
+      key={short}
+      value={short}
+    >
+      {short} - {name}
+    </option>
   ));
 
   const onInputChange = ({ target }) => setNewValue(target.value)
