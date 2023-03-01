@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { currencies } from "../Currencies";
+import { currencies } from "../../Currencies";
 import "./style.css";
 
 const Form = ({ calculateResult }) => {

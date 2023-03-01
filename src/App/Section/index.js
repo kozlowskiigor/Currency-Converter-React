@@ -1,5 +1,5 @@
 import "./style.css";
-import { currencies } from "../Currencies";
+import { currencies } from "../../Currencies";
 
 const Section = ({ title }) => {
 
