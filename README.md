@@ -1,7 +1,6 @@
 # **Currency converter**
 ![Money gif](https://raw.githubusercontent.com/kozlowskiigor/Currency-Converter-React/main/money.gif)
 
-
 ## **Currency converter demo**
 [Currency converter demo](https://kozlowskiigor.github.io/Currency-Converter-React/)
 
