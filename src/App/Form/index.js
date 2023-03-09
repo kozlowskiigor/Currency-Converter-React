@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { currencies } from "../../Currencies";
+// import { Clock } from "../Clock"
 import "./style.css";
 
-const Form = ({ calculateResult }) => {
+export const Form = ({ calculateResult, clock }) => {
 
   const [result, setResult] = useState({ inputCurrency: "PLN", outputCurrency: "PLN", newValue: 0 });
   const [newValue, setNewValue] = useState("");
@@ -44,6 +45,7 @@ const Form = ({ calculateResult }) => {
     >
       <fieldset className="form__fieldset">
         <legend className="form__legend">Kalkulator walut</legend>
+        {clock}
         <p className="form__line">
           <label>
             <span className="form__labelText">Kwota*</span>
@@ -96,5 +98,3 @@ const Form = ({ calculateResult }) => {
     </form>
   );
 };
-
-export default Form;

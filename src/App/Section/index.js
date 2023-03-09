@@ -1,7 +1,7 @@
 import "./style.css";
 import { currencies } from "../../Currencies";
 
-const Section = ({ title }) => {
+export const Section = ({ title }) => {
 
   const averageExchangeRates = currencies.map((element, i) => {
 
@@ -31,5 +31,3 @@ const Section = ({ title }) => {
     </>
   );
 };
-
-export default Section;

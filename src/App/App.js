@@ -1,7 +1,7 @@
-import React from 'react';
-import Form from "./Form";
-import Section from "./Section";
+import { Form } from "./Form";
+import { Section } from "./Section";
 import { currencies } from "../Currencies";
+import { Clock } from "./Clock";
 
 function App() {
 
@@ -24,6 +24,9 @@ function App() {
       </h1>
       <Form
         calculateResult={calculateResult}
+        clock={
+          <Clock />
+        }
       />
       <h2
         className="header secondHeader"
