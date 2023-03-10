@@ -16,7 +16,13 @@ There are currently 5 currencies available:
 - CZK
 - USD. 
 
-In the upper right corner you can see line showing the current weekday, day of the month, month and the time in a country-specific format.
+In the upper right corner you can see line showing the current:
+- weekday
+- day of the month
+- month
+- time
+
+in the country-specific format.
 
 It was a task in programming course in the beggining of my journey and I hope to develop enough to be able to take part in great projects.
 
