@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { currencies } from "../../Currencies";
-// import { Clock } from "../Clock"
 import "./style.css";
 
 export const Form = ({ calculateResult, clock }) => {

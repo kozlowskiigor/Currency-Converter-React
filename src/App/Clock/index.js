@@ -27,5 +27,5 @@ export const Clock = () => {
                 second: "2-digit",
             })}
         </div>
-    )
+    );
 };
