@@ -3,7 +3,7 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "money256.png",
+      "src": "https://raw.githubusercontent.com/kozlowskiigor/Currency-Converter-React/main/images/money256.png",
       "sizes": "256x256",
       "type": "image/png"
     }
