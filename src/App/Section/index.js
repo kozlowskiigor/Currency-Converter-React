@@ -1,5 +1,5 @@
-import "./style.css";
 import { currencies } from "../../Currencies";
+import { ExchangeSection, Currencies } from "./styled";
 
 export const Section = ({ title }) => {
 
@@ -9,25 +9,31 @@ export const Section = ({ title }) => {
       return "";
 
     return (
-      <p
+      <Currencies
         key={i}
-        className="averageExchangeRates__item"
       >
         1,00 {element.short} = {element.value} PLN
-      </p>
+      </Currencies>
     );
   });
 
   return (
     <>
-      <section className="averageExchangeRates">
-        <div className="averageExchangeRates--InsideMargin">
-          <header className="averageExchangeRates__item">
+      <ExchangeSection>
+        <ExchangeSection
+          as="div"
+          margin="margin: 0 15px"
+          border="3px ridge"
+        >
+          <ExchangeSection
+            as="header"
+            margin="margin: 10px 0"
+          >
             {title}
-          </header>
+          </ExchangeSection>
           {averageExchangeRates}
-        </div>
-      </section>
+        </ExchangeSection>
+      </ExchangeSection>
     </>
   );
 };

@@ -17,10 +17,6 @@ body {
   min-height: 100vh;
 }
 
-.convertedAmount {
-  margin: 10px 0;
-}
-
 .resault__value {
   margin: 10px;
   max-width: 100px;

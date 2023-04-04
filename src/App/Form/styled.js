@@ -1,19 +1,21 @@
-.form {
+import styled from 'styled-components';
+
+export const CurrenciesForm = styled.form`
   margin: 0 15px;
   text-align: left;
   overflow-x: auto;
-}
+`;
 
-.form__fieldset {
+export const Fieldset = styled.fieldset`
   max-width: 600px;
   margin: 0 auto;
   border: 3px ridge;
   border-radius: 5px;
   background: hsla(0, 0%, 90%, 0.925);
   padding: 0 5px;
-}
+`;
 
-.form__legend {
+export const Legend = styled.legend`
   background: hsl(180, 100%, 25%);
   border-radius: 10px;
   padding: 5px 10px;
@@ -24,15 +26,19 @@
   border-right-style: inset;
   border-top-color: hsl(0, 0%, 70%);
   border-right-color: hsl(0, 0%, 80%);
-}
+`;
 
-.form__labelText {
+export const FormLine = styled.p`
+  margin: ${({ margin }) => margin || "10px"};
+`;
+
+export const LabelText = styled.span`
   width: 180px;
   display: inline-block;
   margin: 0 15px;
-}
+`;
 
-.form__field {
+export const Input = styled.input`
   border-radius: 5px;
   margin: 0 10px;
   padding: 5px;
@@ -44,22 +50,21 @@
   border-left-style: none;
   border-top-color: hsl(0, 0%, 70%);
   border-right-color: hsl(0, 0%, 80%);
-}
 
-.form__labelText.form__resault {
-  width: 500px;
-}
+  &:required {
+    background: hsl(0, 0%, 85%)
+  };
 
-.form__line {
-  margin: 10px;
-}
+  &:hover {
+    background: hsl(0, 0%, 90%)
+  };
 
-.form__resault {
-  margin-left: 20px;
-  max-width: 500px;
-}
+  &:active {
+    background: hsl(0, 0%, 80%)
+  };
+`;
 
-.form__button {
+export const Button = styled.button`
   margin: 5px auto;
   width: 100%;
   padding: 3px 0;
@@ -72,28 +77,24 @@
   border-right-style: inset;
   border-top-color: hsl(0, 0%, 70%);
   border-right-color: hsl(0, 0%, 80%);
-}
 
-.form__button:hover {
-  background: hsl(180, 100%, 20%);
-}
+  &:hover {
+    background: hsl(180, 100%, 20%);
+  };
 
-.form__button:active {
-  background: hsl(180, 100%, 45%);
-}
+  &:active {
+    background: hsl(180, 100%, 45%);
+  };
+`;
 
-.form__field:required {
-  background: hsl(0, 0%, 85%)
-}
+export const Result = styled.span`
+  display: inline-block;
+  margin-left: 20px;
+  max-width: 500px;
+`;
 
-.form__field:hover {
-  background: hsl(0, 0%, 90%)
-}
-
-.form__field:active {
-  background: hsl(0, 0%, 80%)
-}
-
-.convertedAmount {
-  margin: 10px 0;
-}
+export const ResultValue = styled.strong`
+  margin: 10px;
+  max-width: 100px;
+  padding: 3px;
+`;

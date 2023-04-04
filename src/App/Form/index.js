@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { currencies } from "../../Currencies";
-import "./style.css";
+import { CurrenciesForm, Fieldset, Legend, FormLine, LabelText, Input, Button, Result, ResultValue } from "./styled";
 
 export const Form = ({ calculateResult, clock }) => {
 
@@ -38,62 +38,72 @@ export const Form = ({ calculateResult, clock }) => {
   };
 
   return (
-    <form
-      className="form"
+    <CurrenciesForm
       onSubmit={onFormSubmit}
     >
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Kalkulator walut</legend>
+      <Fieldset>
+        <Legend>
+          Kalkulator walut
+        </Legend>
         {clock}
-        <p className="form__line">
+        <FormLine>
           <label>
-            <span className="form__labelText">Kwota*</span>
-            <input
+            <LabelText>
+              Kwota*
+            </LabelText>
+            <Input
               required
               min="1"
               step="any"
               type="number"
-              className="form__field"
               placeholder="Wpisz kwotę"
               value={newValue}
               onChange={onInputChange}
             />
           </label>
-        </p>
-        <p className="form__line">
+        </FormLine>
+        <FormLine>
           <label>
-            <span className="form__labelText">Przewalutowanie z</span>
-            <select
-              className="form__field"
+            <LabelText>
+              Przewalutowanie z
+            </LabelText>
+            <Input
+              as="select"
               value={inputCurrency}
               onChange={onInputSeclectChange}
             >
               {selectOptions}
-            </select>
+            </Input>
           </label>
-        </p>
-        <p className="form__line">
+        </FormLine>
+        <FormLine>
           <label>
-            <span className="form__labelText">Przewalutowanie na</span>
-            <select
-              className="form__field"
+            <LabelText>
+              Przewalutowanie na
+            </LabelText>
+            <Input
+              as="select"
               value={outputCurrency}
               onChange={onOutputSeclectChange}
             >
               {selectOptions}
-            </select>
+            </Input>
           </label>
-        </p>
-        <button className="form__button">Przewalutuj</button>
-        <span className="form__labelText form__resault">
-          <p className="convertedAmount">
+        </FormLine>
+        <Button>
+          Przewalutuj
+        </Button>
+        <Result>
+          <FormLine
+            margin="margin: 10px 0"
+          >
             Przewalutowana kwota
-            <strong className="resault__value">
+            <ResultValue>
               {convertedAmount.toFixed(2)} {result.outputCurrency}
-            </strong>
-          </p>
-        </span>
-      </fieldset>
-    </form>
+            </ResultValue>
+          </FormLine>
+        </Result>
+      </Fieldset>
+    </CurrenciesForm>
   );
 };
