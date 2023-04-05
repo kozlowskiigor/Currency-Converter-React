@@ -2,6 +2,7 @@ import { Form } from "./Form";
 import { Section } from "./Section";
 import { currencies } from "../Currencies";
 import { Clock } from "./Clock";
+import { H1, } from "./styled";
 
 function App() {
 
@@ -17,22 +18,22 @@ function App() {
 
   return (
     <>
-      <h1
-        className="header"
-      >
+      <H1>
         Kalkulator walut
-      </h1>
+      </H1>
       <Form
         calculateResult={calculateResult}
         clock={
           <Clock />
         }
       />
-      <h2
-        className="header secondHeader"
+      <H1
+        as="h2"
+        maxWidth="465px"
+        margin="15px auto"
       >
         Pola wymagane do wypełnienia oznaczone są *
-      </h2>
+      </H1>
       <Section
         title="Uśrednione kursy wymiany z dnia 09.09.2022"
       />
