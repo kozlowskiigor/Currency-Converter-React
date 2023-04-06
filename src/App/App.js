@@ -2,7 +2,7 @@ import { Form } from "./Form";
 import { Section } from "./Section";
 import { currencies } from "../Currencies";
 import { Clock } from "./Clock";
-import { H1, } from "./styled";
+import { H1 } from "./styled";
 
 function App() {
 
