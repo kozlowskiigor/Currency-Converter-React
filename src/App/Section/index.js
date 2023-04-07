@@ -24,6 +24,7 @@ export const Section = ({ title }) => {
           as="div"
           margin="margin: 0 15px"
           border="3px ridge"
+          background="#e6e6e6bf"
         >
           <ExchangeSection
             as="header"

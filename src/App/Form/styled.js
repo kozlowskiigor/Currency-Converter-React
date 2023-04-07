@@ -78,7 +78,7 @@ export const Button = styled.button`
 
   &:hover {
     filter: brightness(110%);
-    transform: scale(1.02)
+    transform: scale(1.02);
   };
 
   &:active {

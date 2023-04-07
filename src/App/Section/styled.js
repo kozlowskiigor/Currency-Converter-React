@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ExchangeSection = styled.section`
-  background: ${({ theme }) => theme.color.transparencyLightGray};
+  background: ${({ background }) => background || ""};
   max-width: 600px;
   color: ${({ theme }) => theme.color.transparencyBlack};
   padding: 1px;
