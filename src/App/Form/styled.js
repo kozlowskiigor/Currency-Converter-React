@@ -11,21 +11,21 @@ export const Fieldset = styled.fieldset`
   margin: 0 auto;
   border: 3px ridge;
   border-radius: 5px;
-  background: hsla(0, 0%, 90%, 0.925);
+  background: ${({ theme }) => theme.color.transparencyLightGray};
   padding: 0 5px;
 `;
 
 export const Legend = styled.legend`
-  background: hsl(180, 100%, 25%);
+  background: ${({ theme }) => theme.color.teal};
   border-radius: 10px;
   padding: 5px 10px;
   text-align: left;
-  color: beige;
+  color: ${({ theme }) => theme.color.beige};
   border-width: 1px;
   border-top-style: inset;
   border-right-style: inset;
-  border-top-color: hsl(0, 0%, 70%);
-  border-right-color: hsl(0, 0%, 80%);
+  border-top-color: ${({ theme }) => theme.color.gray};
+  border-right-color: ${({ theme }) => theme.color.lightGray};
 `;
 
 export const FormLine = styled.p`
@@ -44,23 +44,21 @@ export const Input = styled.input`
   padding: 5px;
   max-width: 350px;
   border-width: 2px;
-  border-top-style: inset;
-  border-right-style: inset;
-  border-bottom-style: none;
-  border-left-style: none;
-  border-top-color: hsl(0, 0%, 70%);
-  border-right-color: hsl(0, 0%, 80%);
+  border-style: inset inset none none;
+  border-top-color: ${({ theme }) => theme.color.gray};
+  border-right-color: ${({ theme }) => theme.color.lightGray};
+  transition: background 0.5s;
 
   &:required {
-    background: hsl(0, 0%, 85%)
+    background: ${({ theme }) => theme.color.alto};
   };
 
   &:hover {
-    background: hsl(0, 0%, 90%)
+    background: ${({ theme }) => theme.color.mercury};
   };
 
   &:active {
-    background: hsl(0, 0%, 80%)
+    background: ${({ theme }) => theme.color.silver};
   };
 `;
 
@@ -68,22 +66,23 @@ export const Button = styled.button`
   margin: 5px auto;
   width: 100%;
   padding: 3px 0;
-  background: teal;
-  color: beige;
+  background: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.beige};
   border-radius: 5px;
   border: none;
   border-width: 2px;
-  border-top-style: inset;
-  border-right-style: inset;
-  border-top-color: hsl(0, 0%, 70%);
-  border-right-color: hsl(0, 0%, 80%);
+  border-style: inset inset none none;
+  border-top-color: ${({ theme }) => theme.color.gray};
+  border-right-color: ${({ theme }) => theme.color.lightGray};
+  transition: transform 1s, filter 0.3s;
 
   &:hover {
-    background: hsl(180, 100%, 20%);
+    filter: brightness(110%);
+    transform: scale(1.02)
   };
 
   &:active {
-    background: hsl(180, 100%, 45%);
+    filter: brightness(90%);
   };
 `;
 
