@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App/App.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
+import { GlobalStyle } from './GlobalStyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <>
+    <GlobalStyle />
+    <App />
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
