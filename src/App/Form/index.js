@@ -102,7 +102,7 @@ export const Form = ({ calculateResult, clock }) => {
           >
             Przewalutowana kwota
             <ResultValue>
-              {convertedAmount.toFixed(2)} {result.outputCurrency}
+              {result.newValue} {result.inputCurrency} = {convertedAmount.toFixed(2)} {result.outputCurrency}
             </ResultValue>
           </FormLine>
           <RequiredFields>
