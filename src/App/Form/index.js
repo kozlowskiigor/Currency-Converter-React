@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { currencies } from "../../Currencies";
 import { CurrenciesForm, Fieldset, Legend, FormLine, LabelText, Input, Button, Result, ResultValue } from "./styled";
 
@@ -10,6 +10,7 @@ export const Form = ({ calculateResult, clock }) => {
   const [outputCurrency, setOutputCurrency] = useState("PLN");
 
   const convertedAmount = calculateResult(result);
+  const inputRef = useRef(null)
 
   const selectOptions = currencies.map(({ short, name }) => (
     <option
@@ -25,10 +26,11 @@ export const Form = ({ calculateResult, clock }) => {
   const onOutputSeclectChange = ({ target }) => setOutputCurrency(target.value)
 
   const onFormSubmit = (event) => {
-
     event.preventDefault();
 
     setNewValue("");
+
+    inputRef.current.focus();
 
     setResult({
       inputCurrency,
@@ -58,6 +60,7 @@ export const Form = ({ calculateResult, clock }) => {
               type="number"
               placeholder="Wpisz kwotę"
               value={newValue}
+              ref={inputRef}
               onChange={onInputChange}
             />
           </label>
