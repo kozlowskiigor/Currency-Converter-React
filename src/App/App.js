@@ -27,12 +27,6 @@ function App() {
           <Clock />
         }
       />
-      <H1
-        as="h2"
-        maxWidth="465px"
-      >
-        Pola wymagane do wypełnienia oznaczone są *
-      </H1>
       <Section
         title="Uśrednione kursy wymiany z dnia 09.09.2022"
       />

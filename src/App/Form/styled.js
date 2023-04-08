@@ -31,6 +31,13 @@ export const FormLine = styled.p`
   margin: ${({ margin }) => margin || "10px"};
 `;
 
+export const RequiredFields = styled.p`
+  font-family: monospace;
+  color: ${({ theme }) => theme.color.boulder};
+  font-size: 12px;
+  margin: 20px auto 10px;
+`;
+
 export const LabelText = styled.span`
   width: 180px;
   display: inline-block;
@@ -41,7 +48,8 @@ export const Input = styled.input`
   border-radius: 5px;
   margin: 0 10px;
   padding: 5px;
-  max-width: 350px;
+  max-width: 225px;
+  max-height: 29px;
   border-width: 2px;
   border-style: inset inset none none;
   border-top-color: ${({ theme }) => theme.color.gray};

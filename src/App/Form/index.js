@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { currencies } from "../Currencies";
-import { CurrenciesForm, Fieldset, Legend, FormLine, LabelText, Input, Button, Result, ResultValue } from "./styled";
+import { CurrenciesForm, Fieldset, Legend, FormLine, LabelText, Input, Button, Result, ResultValue, RequiredFields } from "./styled";
 
 export const Form = ({ calculateResult, clock }) => {
 
@@ -105,6 +105,9 @@ export const Form = ({ calculateResult, clock }) => {
               {convertedAmount.toFixed(2)} {result.outputCurrency}
             </ResultValue>
           </FormLine>
+          <RequiredFields>
+            Pola wymagane do wypełnienia oznaczone są *
+          </RequiredFields>
         </Result>
       </Fieldset>
     </CurrenciesForm>
