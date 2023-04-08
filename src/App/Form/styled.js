@@ -96,7 +96,7 @@ export const Button = styled.button`
 export const Result = styled.span`
   display: inline-block;
   margin-left: 20px;
-  max-width: 500px;
+  max-width: 550px;
 `;
 
 export const ResultValue = styled.strong`
