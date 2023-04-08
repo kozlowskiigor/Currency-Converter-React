@@ -10,7 +10,7 @@ import {
   Button,
   Result,
   ResultValue,
-  RequiredFields
+  RequiredFields,
 } from "./styled";
 
 export const Form = ({ calculateResult, clock }) => {
