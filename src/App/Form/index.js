@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { currencies } from "../../Currencies";
+import { currencies } from "../Currencies";
 import { CurrenciesForm, Fieldset, Legend, FormLine, LabelText, Input, Button, Result, ResultValue } from "./styled";
 
 export const Form = ({ calculateResult, clock }) => {
@@ -98,7 +98,7 @@ export const Form = ({ calculateResult, clock }) => {
         </Button>
         <Result>
           <FormLine
-            margin="margin: 10px 0"
+            margin="10px 0"
           >
             Przewalutowana kwota
             <ResultValue>
