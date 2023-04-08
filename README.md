@@ -30,9 +30,12 @@ It was a task in programming course in the beggining of my journey and I hope to
 - HTML
 - CSS
 - JAVASCRIPT
-- BEM
-- MARKDOWN
+- BEM CONVENTION
 - ES6+ FEATURES
+- GIT
+- REACT
+- STYLED COMPONENTS
+- CUSTOM HOOKS
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
