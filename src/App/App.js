@@ -30,7 +30,6 @@ function App() {
       <H1
         as="h2"
         maxWidth="465px"
-        margin="15px auto"
       >
         Pola wymagane do wypełnienia oznaczone są *
       </H1>

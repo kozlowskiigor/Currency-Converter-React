@@ -22,8 +22,7 @@ export const Legend = styled.legend`
   text-align: left;
   color: ${({ theme }) => theme.color.beige};
   border-width: 1px;
-  border-top-style: inset;
-  border-right-style: inset;
+  border-style: inset inset none none;
   border-top-color: ${({ theme }) => theme.color.gray};
   border-right-color: ${({ theme }) => theme.color.lightGray};
 `;

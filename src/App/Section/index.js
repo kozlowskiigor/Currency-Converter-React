@@ -1,5 +1,5 @@
 import { currencies } from "../../Currencies";
-import { ExchangeSection, Currencies } from "./styled";
+import { Currencies, ExchangeSection, Div, Header } from "./styled";
 
 export const Section = ({ title }) => {
 
@@ -20,20 +20,12 @@ export const Section = ({ title }) => {
   return (
     <>
       <ExchangeSection>
-        <ExchangeSection
-          as="div"
-          margin="margin: 0 15px"
-          border="3px ridge"
-          background="#e6e6e6bf"
-        >
-          <ExchangeSection
-            as="header"
-            margin="margin: 10px 0"
-          >
+        <Div>
+          <Header>
             {title}
-          </ExchangeSection>
+          </Header>
           {averageExchangeRates}
-        </ExchangeSection>
+        </Div>
       </ExchangeSection>
     </>
   );
