@@ -100,7 +100,7 @@ export const Result = styled.span`
 `;
 
 export const Strong = styled.strong`
-  margin: 10px;
+  margin: 25px;
   max-width: 100px;
   padding: 3px;
 `;
