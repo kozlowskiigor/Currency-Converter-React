@@ -9,7 +9,7 @@ import {
   Input,
   Button,
   Result,
-  ResultValue,
+  Strong,
   RequiredFields,
 } from "./styled";
 
@@ -17,10 +17,10 @@ export const Form = ({ calculateResult, clock }) => {
 
   const [result, setResult] = useState({ inputCurrency: "PLN", outputCurrency: "PLN", newValue: 0 });
   const [newValue, setNewValue] = useState("");
+  const [convertedAmount, setConvertedAmount] = useState(0);
   const [inputCurrency, setInputCurrency] = useState("PLN");
   const [outputCurrency, setOutputCurrency] = useState("PLN");
 
-  const convertedAmount = calculateResult(result);
   const inputRef = useRef(null)
 
   const selectOptions = currencies.map(({ short, name }) => (
@@ -48,7 +48,26 @@ export const Form = ({ calculateResult, clock }) => {
       outputCurrency,
       newValue,
     });
+
+    const result = {
+      inputCurrency,
+      outputCurrency,
+      newValue,
+    };
+
+    const amount = calculateResult(result);
+    setConvertedAmount(amount)
   };
+
+  const ResultLine = ({ result, convertedAmount }) => (
+    <FormLine margin="10px 0">
+      {result.length !== undefined && (
+        <Strong>
+          {result.newValue}&nbsp;{result.inputCurrency} = {convertedAmount.toFixed(2)}&nbsp;{result.outputCurrency}
+        </Strong>
+      )}
+    </FormLine>
+  );
 
   return (
     <CurrenciesForm
@@ -108,14 +127,10 @@ export const Form = ({ calculateResult, clock }) => {
           Przewalutuj
         </Button>
         <Result>
-          <FormLine
-            margin="10px 0"
-          >
-            Przewalutowana kwota
-            <ResultValue>
-              {result.newValue}&nbsp;{result.inputCurrency} = {convertedAmount.toFixed(2)}&nbsp;{result.outputCurrency}
-            </ResultValue>
-          </FormLine>
+          <ResultLine
+            result={result}
+            convertedAmount={convertedAmount}
+          />
           <RequiredFields>
             Pola wymagane do wypełnienia oznaczone są *
           </RequiredFields>
