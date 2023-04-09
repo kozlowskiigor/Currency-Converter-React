@@ -52,9 +52,10 @@ export const Form = ({ calculateResult, clock }) => {
 
   const ResultLine = ({ result }) => (
     <FormLine margin="10px 0">
+      Przewalutana kwota
       {result.newValue !== "" && result.newValue !== 0 && (
         <Strong>
-          {result.newValue}&nbsp;{result.inputCurrency} = {convertedAmount.toFixed(2)}&nbsp;{result.outputCurrency}
+          {parseFloat(result.newValue).toFixed(2)}&nbsp;{result.inputCurrency} = {convertedAmount.toFixed(2)}&nbsp;{result.outputCurrency}
         </Strong>
       )}
     </FormLine>
@@ -118,9 +119,7 @@ export const Form = ({ calculateResult, clock }) => {
           Przewalutuj
         </Button>
         <Result>
-          <ResultLine
-            result={result}
-          />
+          <ResultLine result={result} />
           <RequiredFields>
             Pola wymagane do wypełnienia oznaczone są *
           </RequiredFields>
