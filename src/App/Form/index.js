@@ -62,9 +62,7 @@ export const Form = ({ calculateResult, clock }) => {
   );
 
   return (
-    <CurrenciesForm
-      onSubmit={onFormSubmit}
-    >
+    <CurrenciesForm onSubmit={onFormSubmit}>
       <Fieldset>
         <Legend>
           Kalkulator walut
