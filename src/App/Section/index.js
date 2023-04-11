@@ -1,4 +1,4 @@
-import { currencies } from "../Currencies";
+import { currencies } from "../currencies";
 import { Currencies, ExchangeSection, Div, Header } from "./styled";
 
 export const Section = ({ title }) => {

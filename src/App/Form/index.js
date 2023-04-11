@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { currencies } from "../Currencies";
+import { currencies } from "../currencies";
 import {
   CurrenciesForm,
   Fieldset,
@@ -21,7 +21,7 @@ export const Form = ({ calculateResult, clock }) => {
   const [outputCurrency, setOutputCurrency] = useState("PLN");
 
   const convertedAmount = calculateResult(result);
-  const inputRef = useRef(null)
+  const inputRef = useRef(null);
 
   const selectOptions = currencies.map(({ short, name }) => (
     <option

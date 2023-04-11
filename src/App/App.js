@@ -1,13 +1,11 @@
 import { Form } from "./Form";
 import { Section } from "./Section";
-import { currencies } from "./Currencies";
+import { currencies } from "./currencies";
 import { Clock } from "./Clock";
 import { H1 } from "./styled";
 
 function App() {
-
   const calculateResult = ({ inputCurrency, outputCurrency, newValue }) => {
-
     const inputCurrencyRate = currencies.find(
       ({ short }) => short === inputCurrency).value;
     const outputCurrencyRate = currencies.find(
