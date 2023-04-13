@@ -1,6 +1,6 @@
 import { FormLine, Strong } from "../styled";
 
-export const ResultLine = ({ result }) => {
+export const ResultLine = ({ result, convertedAmount }) => (
   <FormLine margin="10px 0">
     Przewalutana kwota
     {result.newValue !== "" && result.newValue !== 0 && (
@@ -9,4 +9,4 @@ export const ResultLine = ({ result }) => {
       </Strong>
     )}
   </FormLine>
-};
+);

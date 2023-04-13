@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { currencies } from "../currencies";
+import { ResultLine } from "./ResultLine";
 import {
   CurrenciesForm,
   Fieldset,
@@ -9,12 +10,10 @@ import {
   Input,
   Button,
   Result,
-  Strong,
   RequiredFields,
 } from "./styled";
 
 export const Form = ({ calculateResult, clock }) => {
-
   const [result, setResult] = useState({ inputCurrency: "PLN", outputCurrency: "PLN", newValue: 0 });
   const [newValue, setNewValue] = useState("");
   const [inputCurrency, setInputCurrency] = useState("PLN");
@@ -49,17 +48,6 @@ export const Form = ({ calculateResult, clock }) => {
       newValue,
     });
   };
-
-  const ResultLine = ({ result }) => (
-    <FormLine margin="10px 0">
-      Przewalutana kwota
-      {result.newValue !== "" && result.newValue !== 0 && (
-        <Strong>
-          {parseFloat(result.newValue).toFixed(2)}&nbsp;{result.inputCurrency} = {convertedAmount.toFixed(2)}&nbsp;{result.outputCurrency}
-        </Strong>
-      )}
-    </FormLine>
-  );
 
   return (
     <CurrenciesForm onSubmit={onFormSubmit}>
@@ -117,7 +105,10 @@ export const Form = ({ calculateResult, clock }) => {
           Przewalutuj
         </Button>
         <Result>
-          <ResultLine result={result} />
+          <ResultLine
+            result={result}
+            convertedAmount={convertedAmount}
+          />
           <RequiredFields>
             Pola wymagane do wypełnienia oznaczone są *
           </RequiredFields>
